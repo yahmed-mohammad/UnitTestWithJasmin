@@ -1,8 +1,9 @@
-describe("OddEvenGenerator", function() {
+describe("OddEvenGenerator", function() { // xdescribe to desable the whole test spec
   var randomNumGenerator8;
   var randomNumGenerator3;
 
   beforeEach(function() {
+    // Mocking the random generator function
     randomNumGenerator8 = function(to, from) {
       return 8;
     };
@@ -12,7 +13,7 @@ describe("OddEvenGenerator", function() {
 
   });
 
-  it("should produce an odd number", function() {
+  it("should produce an odd number", function() { // xit to disable a particular test
     var result = getRandomOddOrEven1to10("odd", randomNumGenerator3);
     expect(result).toEqual(3);
   });
