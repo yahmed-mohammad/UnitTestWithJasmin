@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NarrowItDown Application</title>
+</head>
+<body ng-app="NarrowItDownApp">
+    <div class="container">
+        <h4>Narrow It Down Application</h4>
+        <p>This application pulls the data from server and shows only the items user is searching for.</p>
+        <div ng-controller="NarrowItDownController as narrowCtrl">
+            <div class="row">
+                    <input class="one-half column" type="text" placeholder="enter the item to search" ng-model="narrowCtrl.item">
+                    <button class="one-half column button-primary" ng-click="narrowCtrl.searchMenu()">Narrow It Down For Me!</button>
+            </div>
+            <menu-list></menu-list>            
+        </div>
+    </div>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css" integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ==" crossorigin="anonymous" />
+    <script src="lib/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

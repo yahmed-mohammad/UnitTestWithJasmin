@@ -4,7 +4,6 @@ describe("Test the Controller", function() {
     });
     var $controller;
     var mockShoppingService;
-    var mockQ;
     var myCtrl;
 
     beforeEach(inject(function(_$controller_) {

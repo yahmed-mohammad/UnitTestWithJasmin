@@ -1,0 +1,24 @@
+<div ng-if="narrowCtrl.empty">Please enter the item to search!</div>
+<div ng-if="narrowCtrl.nothingFound">Nothing found!</div>
+<div ng-if="narrowCtrl.isFound">
+    <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Short name</th>
+            <th>Description</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in narrowCtrl.found">
+            <td>{{item.name}}</td>
+            <td>{{item.short_name}}</td>
+            <td>{{item.description}}</td>
+            <td>
+              <button ng-click="narrowCtrl.remove($index)" class="button-primary">Don't want this one!</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
