@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton-framework/1.1.1/skeleton.min.css" integrity="sha512-zzq8ZrbhP7DGbwClbqSYuo+di3FvAlMNykCKWE6pHuqmCgGjJSISDTzy7QkdI2ajLlgw0nx6hxIu8os2hYuN8w==" crossorigin="anonymous" />
+    <title>Limiting Shopping List with Promise</title>
+</head>
+<body ng-app="LimitShoppingList">
+    <div class="container" ng-controller="LimitShoppingListController as limitCtrl">
+        <h4>Limit Shopping List with Promise</h4>
+        <div class="row">
+            <div class="two column">
+                <input type="text" placeholder="Enter the item" ng-model="limitCtrl.itemName">
+            </div>
+            <div class="two column">
+                <input type="text" placeholder="Enter the Quantity" ng-model="limitCtrl.itemQuantity">
+            </div>
+            <div class="two column">
+                <button class="button-primary" ng-click="limitCtrl.addItems()">Add to Shopping List</button>
+            </div>
+        </div>
+        <ol>
+            <li ng-repeat="item in limitCtrl.itemList">{{item.quantity}} units of {{item.name}}</li>
+        </ol>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
